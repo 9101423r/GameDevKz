@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\GameDevKz\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\controllers\\eventsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\controllers\\eventsadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\eventsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\eventsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\eventsadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\eventsadmin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\areas\\admin\\views\\eventsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|solutionrelative:gamedevkz.server\\areas\\admin\\views\\eventsadmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C1B8DE6-34EE-4A4F-93CD-FB06A29D9F34}|GameDevKz.Server\\GameDevKz.Server.csproj|c:\\users\\user\\source\\repos\\gamedevkz\\gamedevkz.server\\model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,37 +94,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T15:36:13.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
-              "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
-              "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T15:26:05.611Z",
+              "WhenOpened": "2025-12-07T16:41:35.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Create.cshtml",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Create.cshtml",
@@ -132,12 +119,11 @@
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T15:25:43.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T15:25:43.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Index.cshtml",
@@ -150,59 +136,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml",
               "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-07T15:17:33.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Models\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Models\\LoginViewModel.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Models\\LoginViewModel.cs",
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T15:07:05.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EventsAdminController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Controllers\\EventsAdminController.cs",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Controllers\\EventsAdminController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Controllers\\EventsAdminController.cs",
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Controllers\\EventsAdminController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T15:04:21.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Controllers\\AccountController.cs",
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwCoAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAcwB8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T15:04:08.692Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\SeedData.cs",
               "RelativeDocumentMoniker": "GameDevKz.Server\\SeedData.cs",
@@ -210,21 +196,32 @@
               "RelativeToolTip": "GameDevKz.Server\\SeedData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T15:02:15.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T15:02:15.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Program.cs",
               "RelativeDocumentMoniker": "GameDevKz.Server\\Program.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Program.cs",
               "RelativeToolTip": "GameDevKz.Server\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T13:31:43.307Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
+              "RelativeDocumentMoniker": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\GameDevKz\\GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
+              "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Edit.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T15:26:05.611Z"
             },
             {
               "$type": "Document",
@@ -236,8 +233,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T15:26:28.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T15:26:28.41Z"
             },
             {
               "$type": "Document",
@@ -249,8 +245,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Areas\\Admin\\Views\\EventsAdmin\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T15:26:45.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T15:26:45.599Z"
             },
             {
               "$type": "Document",
@@ -262,8 +257,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Model\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:57:47.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:57:47.724Z"
             },
             {
               "$type": "Document",
@@ -275,8 +269,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Model\\Event.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:35:07.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:35:07.336Z"
             },
             {
               "$type": "Document",
@@ -288,8 +281,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Services\\EventService.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAIwC8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:32:11.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:32:11.365Z"
             },
             {
               "$type": "Document",
@@ -301,8 +293,7 @@
               "RelativeToolTip": "GameDevKz.Server\\DTOs\\EventCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:31:19.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:31:19.177Z"
             },
             {
               "$type": "Document",
@@ -314,8 +305,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Controllers\\EventsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:30:18.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:30:18.504Z"
             },
             {
               "$type": "Document",
@@ -327,8 +317,7 @@
               "RelativeToolTip": "GameDevKz.Server\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-07T13:29:53.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T13:29:53.523Z"
             },
             {
               "$type": "Document",
@@ -340,8 +329,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Model\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T02:12:48.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T02:12:48.483Z"
             },
             {
               "$type": "Document",
@@ -353,8 +341,7 @@
               "RelativeToolTip": "GameDevKz.Server\\DTOs\\EventUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:31:36.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:31:36.796Z"
             },
             {
               "$type": "Document",
@@ -366,8 +353,7 @@
               "RelativeToolTip": "GameDevKz.Server\\Services\\IEventService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:31:56.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:31:56.802Z"
             }
           ]
         }

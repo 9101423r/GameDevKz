@@ -1,4 +1,4 @@
-using GameDevKz.Server;
+﻿using GameDevKz.Server;
 using GameDevKz.Server.Model;
 using GameDevKz.Server.Services;
 using Microsoft.AspNetCore.Identity;
@@ -6,18 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
 builder.Services.AddScoped<IEventService, EventService>();
 
 builder.Services.AddEndpointsApiExplorer();
-
-
 builder.Services.AddSwaggerGen();
-
-
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
@@ -35,7 +31,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
-
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Admin/Account/Login";
@@ -43,32 +38,25 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.ExpireTimeSpan = TimeSpan.FromHours(8);
     options.SlidingExpiration = true;
     options.Cookie.HttpOnly = true;
-    options.Cookie.SameSite = SameSiteMode.Lax; 
+    options.Cookie.SameSite = SameSiteMode.Lax;
 });
-
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+// Swagger in dev
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.MapFallbackToFile("/index.html");
-
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "areas",
@@ -76,7 +64,11 @@ app.MapControllerRoute(
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
+app.MapControllers();
 
+app.MapFallbackToFile("/index.html");
+
+// Seed roles/users (optional) — см. SeedData ниже
 // await SeedData.EnsureSeedDataAsync(app.Services);
 
 app.Run();

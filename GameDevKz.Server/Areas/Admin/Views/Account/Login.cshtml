@@ -1,14 +1,30 @@
-﻿@page
-@model GameDevKz.Server.Areas.Admin.Models.LoginViewModel
+﻿@model GameDevKz.Server.Areas.Admin.Models.LoginViewModel
+
 @{
-    <form asp-action="Login" method="post">
-        @Html.AntiForgeryToken()
-        <input type="hidden" asp-for="ReturnUrl" />
+    ViewData["Title"] = "Вход";
+}
 
-        <input asp-for="Email" />
-        <input asp-for="Password" type="password" />
+<h1>Вход</h1>
+
+<form asp-action="Login" method="post">
+    @Html.AntiForgeryToken()
+
+    <div>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <div>
         <input asp-for="RememberMe" type="checkbox" />
+    </div>
 
-        <button type="submit">Войти</button>
-    </form>
+    <input type="hidden" asp-for="ReturnUrl" />
+
+    <button type="submit">Войти</button>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }
