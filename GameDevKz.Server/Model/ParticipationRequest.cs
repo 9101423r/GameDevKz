@@ -1,4 +1,6 @@
-﻿namespace GameDevKz.Server.Model
+﻿using System.Text.Json.Serialization;
+
+namespace GameDevKz.Server.Model
 {
     public class ParticipationRequest
     {
@@ -6,6 +8,8 @@
 
         public int Id { get; set; }
         public int EventId { get; set; }
+
+        [JsonIgnore]
         public Event Event { get; set; } = null!;
 
         public string FullName { get; set; } = string.Empty;

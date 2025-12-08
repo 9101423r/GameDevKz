@@ -237,38 +237,6 @@ namespace GameDevKz.Server.Areas.Admin.Controllers
         }
 
         // -------------------------
-        // PARTICIPATION REQUESTS (basic)
-        // List requests for event
-        // -------------------------
-        public async Task<IActionResult> Requests(int eventId)
-        {
-            var ev = await _db.Events.FindAsync(eventId);
-            if (ev == null) return NotFound();
-
-            var requests = await _db.ParticipationRequests
-                .Where(r => r.EventId == eventId)
-                .OrderByDescending(r => r.CreatedAt)
-                .ToListAsync();
-
-            ViewBag.Event = ev;
-            return View(requests);
-        }
-
-        // Approve/Reject request
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ChangeRequestStatus(int id, ParticipationStatus status)
-        {
-            var req = await _db.ParticipationRequests.FindAsync(id);
-            if (req == null) return NotFound();
-
-            req.Status = status;
-            await _db.SaveChangesAsync();
-
-            return RedirectToAction("Requests", new { eventId = req.EventId });
-        }
-
-        // -------------------------
         // ---------- HELPERS ----------
         // -------------------------
 
@@ -433,6 +401,65 @@ namespace GameDevKz.Server.Areas.Admin.Controllers
             // remove any char that's not letter/digit/- (simple)
             var arr = slug.Where(c => char.IsLetterOrDigit(c) || c == '-').ToArray();
             return new string(arr);
+        }
+
+
+        // GET: /Admin/EventsAdmin/Requests?eventId=123
+        public async Task<IActionResult> Requests(int eventId)
+        {
+            var ev = await _db.Events
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.Id == eventId);
+
+            if (ev == null) return NotFound();
+
+            var requests = await _db.ParticipationRequests
+                .Where(r => r.EventId == eventId)
+                .OrderByDescending(r => r.CreatedAt)
+                .ToListAsync();
+
+            ViewBag.Event = ev;
+            return View(requests); // Views/Areas/Admin/Views/EventsAdmin/Requests.cshtml
+        }
+
+        // GET: /Admin/EventsAdmin/RequestDetails/5
+        public async Task<IActionResult> RequestDetails(int id)
+        {
+            var req = await _db.ParticipationRequests
+                .Include(r => r.Event)
+                .FirstOrDefaultAsync(r => r.Id == id);
+
+            if (req == null) return NotFound();
+            return View(req); // Views/Areas/Admin/Views/EventsAdmin/RequestDetails.cshtml
+        }
+
+        // POST: change status (Approve/Reject)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ChangeRequestStatus(int id, ParticipationRequest.ParticipationStatus status)
+        {
+            var req = await _db.ParticipationRequests.FindAsync(id);
+            if (req == null) return NotFound();
+
+            req.Status = status;
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction("Requests", new { eventId = req.EventId });
+        }
+
+        // POST: delete request
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteRequest(int id)
+        {
+            var req = await _db.ParticipationRequests.FindAsync(id);
+            if (req == null) return NotFound();
+
+            var eventId = req.EventId;
+            _db.ParticipationRequests.Remove(req);
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction("Requests", new { eventId });
         }
     }
 }

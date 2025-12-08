@@ -6,7 +6,6 @@
 }
 
 <div class="p-6">
-    <h1 class="text-2xl font-bold mb-6">Детали события</h1>
 
     <div class="bg-white shadow rounded-xl p-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6">
@@ -54,6 +53,11 @@
         </div>
 
         <div class="mt-8 flex gap-3">
+
+            <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Requests" asp-route-eventId="@Model.Id"
+               class="inline-flex items-center px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-yellow-600 transition">
+                Управлять заявками
+            </a>
 
             <a asp-area="Admin"
                asp-controller="EventsAdmin"
