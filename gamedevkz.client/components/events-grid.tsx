@@ -138,7 +138,7 @@ export default function EventsGrid() {
             >
               {/* Featured event */}
               <Link
-                href={`/collections/${group[0].id}`}
+                href={`/events/${group[0].id}`}
                 className="group block"
                 onClick={playShutterSound}
               >

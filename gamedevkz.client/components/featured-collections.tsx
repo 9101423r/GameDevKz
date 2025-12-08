@@ -100,7 +100,7 @@ export default function FeaturedCollections() {
           className="h-full"
         >
           <Link
-            href={`/collections/${event.id}`}
+            href={"/events/${event.id}"}
             className="group block h-full"
             onClick={playShutterSound}
           >
