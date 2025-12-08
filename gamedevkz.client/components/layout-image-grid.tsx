@@ -15,10 +15,10 @@ const SkeletonOne = () => {
   return (
     <div>
       <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
-        Tokyo Nights
+      Digital Bridge GCA 2025
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Exploring the vibrant nightlife and neon-lit streets of Tokyo's urban landscape.
+      Мы участвовали в орагнизации гейм-дев зоны на крупнейшем центрально-азиатском технологическом событии и привезли несколько Алматинских игровых студий 
       </p>
     </div>
   );
@@ -28,10 +28,10 @@ const SkeletonTwo = () => {
   return (
     <div>
       <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
-        Urban Portraits
+        AKIRA DEMO DAY
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Capturing the essence of city life through intimate street photography and urban portraiture.
+       Мы организуем Demo-дни в которых местные студии могут показать демо-версии своих игр на широкую аудиторию геймеров
       </p>
     </div>
   );
@@ -41,10 +41,10 @@ const SkeletonThree = () => {
   return (
     <div>
       <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
-        New Zealand
+        Shashlyki
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Documenting the raw beauty and untamed wilderness of New Zealand's landscapes.
+      Это - Шелки. Довольный участник одного из наших излюбленных форматов - Майского шашлычника. 
       </p>
     </div>
   );
@@ -54,10 +54,10 @@ const SkeletonFour = () => {
   return (
     <div>
       <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
-        Iceland
+        Turkic Game Jam 2025
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Capturing the ethereal beauty of Iceland's dramatic landscapes and natural wonders.
+      АКИРА не только организует и помогает организовывать мероприятия, мы так же ведём репортажи с места событий в мире ГеймДева Центральной Азии. 
       </p>
     </div>
   );
@@ -68,25 +68,25 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-2",
-    thumbnail: "/Tokyo/tokyo-22.webp",
+    thumbnail: "/PageGallery/astana.jpg",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
-    thumbnail: "/Urban Portraits/urban-portraits-1.jpg",
+    thumbnail: "/PageGallery/demoday.jpg",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "/new zealand/new-zealand-18.jpg",
+    thumbnail: "/PageGallery/shelki.jpg",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
-    thumbnail: "/Iceland/iceland-1.jpg",
+    thumbnail: "/PageGallery/tgj25.webp",
   },
 ];
 

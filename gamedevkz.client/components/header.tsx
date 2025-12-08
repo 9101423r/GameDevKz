@@ -9,10 +9,10 @@ import { ThemeToggle } from "./theme-toggle"
 import Logo from "./logo"
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Showcase", href: "/showcase" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Главная", href: "/" },
+  { name: "События", href: "/showcase" },
+  { name: "О нас", href: "/about" },
+  { name: "Связь", href: "/contact" },
 ]
 
 export default function Header() {
@@ -76,7 +76,7 @@ export default function Header() {
                 isScrolled || pathname !== "/" ? "text-primary" : "text-primary"
               }`}
             >
-              X100
+              <img className="h-[3vh]" src={"/Logo/akira_logo.png"}></img>
             </Link>
           </div>
         

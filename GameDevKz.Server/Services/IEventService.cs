@@ -5,7 +5,7 @@ namespace GameDevKz.Server.Services
 {
     public interface IEventService
     {
-        Task<IEnumerable<Event>> GetAllAsync();
+        Task<IEnumerable<EventDto>> GetAllAsync();
         Task<Event?> GetByIdAsync(int id);
         Task<Event> CreateAsync(EventCreateDto dto);
         Task<Event?> UpdateAsync(int id, EventUpdateDto dto);

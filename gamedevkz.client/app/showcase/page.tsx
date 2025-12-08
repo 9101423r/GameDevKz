@@ -2,17 +2,14 @@
 
 import { Suspense } from "react"
 import Image from "next/image"
-import CollectionGrid from "@/components/collection-grid"
-import TagFilters from "@/components/tag-filters"
+import EventsGrid from "@/components/events-grid"
+import TagFilters from "@/components/tag-filter"
 import Loading from "@/components/loading"
 import { motion } from "framer-motion"
 
 export default function ShowcasePage() {
   return (
     <div className="min-h-screen">
-      {/* Spacer for header
-      <div className="header-height"></div> */}
-
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
@@ -29,9 +26,9 @@ export default function ShowcasePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl text-white mb-4">Photography Collections</h1>
+          <h1 className="text-4xl md:text-5xl text-white mb-4">Events & Meetups</h1>
           <p className="text-white/90 text-lg max-w-2xl">
-            Explore my diverse portfolio of photography from around the world
+            Полный список мероприятий — фильтрация по тегам и поиск.
           </p>
         </motion.div>
       </section>
@@ -48,10 +45,10 @@ export default function ShowcasePage() {
         </div>
       </motion.section>
 
-      {/* Collections Grid */}
+      {/* Events Grid */}
       <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto pb-20">
         <Suspense fallback={<Loading />}>
-          <CollectionGrid />
+          <EventsGrid />
         </Suspense>
       </section>
     </div>

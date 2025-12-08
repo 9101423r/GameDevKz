@@ -17,7 +17,7 @@ export default function Home() {
       <div className="header-height"></div>
 
       {/* Hero Section with Slider */}
-      <HeroGalleryScroll />
+      <HeroGalleryScroll /> 
 
       {/* Hero Section with Slider 
       <HeroSlider />*/}
@@ -31,16 +31,15 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl mb-6">The Art of Visual Storytelling</h2>
+            <h2 className="text-3xl md:text-4xl mb-6">Игры это Искусство. А Искусство это Любовь.</h2>
             <p className="text-primary-secondary mb-6">
-              Every photograph tells a story, captures an emotion, and preserves a moment in time. My work focuses on
-              finding beauty in both grand landscapes and subtle details.
+              Cообщество, где разработчики, художники, дизайнеры и геймеры собираются вместе, чтобы находить поддержку, получать фидбек и воплощать свои идеи в жизнь!
             </p>
             <p className="text-primary-secondary mb-8">
-              Explore my collections from around the world, each with its own unique perspective and narrative.
+              Наша мечта — сделать так, чтобы каждый разработчик мог найти друзей с общими интересами, первых фанатов своего проекта и даже внешние инвестиции! 
             </p>
             <AnimatedButton href="/about" variant="outline" icon={<ArrowRight size={16} />}>
-              Learn More About The Journey
+              Что ещё?
             </AnimatedButton>
           </motion.div>
           <motion.div
@@ -51,7 +50,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <Image
-              src="/Morocco/morocco-9.webp?height=1000&width=800"
+              src="/HeroImages/gamesislove.webp?height=1000&width=800"
               alt="Photographer at work"
               fill
               className="object-cover"
@@ -75,12 +74,14 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-primary text-3xl md:text-4xl mb-6">Collaborate?</h2>
+          <h2 className="text-primary text-3xl md:text-4xl mb-6">Заинтерисован?</h2>
           <p className="text-primary max-w-2xl mx-auto mb-8">
-            Whether you're looking for prints, licensing, or a custom photography project, feel free to get in touch.
+            Наш клуб это открытое для мира пространство. Для вступления в клуб достаточно прийти и поучаствовать в любом нашем мероприятии и мы добавим тебя в наш закрытый чатик. 
+            <br/>
+            А для потенциального партнёрства можешь связаться с нами
           </p>
           <AnimatedButton href="/contact" variant="primary" icon={<ArrowRight size={18} />}>
-            Get in Touch
+            Связь - связь
           </AnimatedButton>
         </motion.div>
       </section>
@@ -95,9 +96,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-primary text-3xl md:text-4xl mb-4">Featured Collections</h2>
+            <h2 className="text-primary text-3xl md:text-4xl mb-4">Последние события</h2>
             <p className="text-primary max-w-2xl mx-auto">
-              Explore some of my most popular photography collections from around the world
+              Здесь ты можешь найти прошедние и грядующие ивенты нашего клуба
             </p>
           </motion.div>
           <FeaturedCollections />
@@ -109,7 +110,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
-              View All Collections
+              Больше
             </AnimatedButton>
           </motion.div>
         </div>

@@ -26,25 +26,25 @@ namespace GameDevKz.Server.Controllers
             return ev == null ? NotFound() : Ok(ev);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(EventCreateDto dto)
-        {
-            var ev = await _service.CreateAsync(dto);
-            return CreatedAtAction(nameof(Get), new { id = ev.Id }, ev);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> Create(EventCreateDto dto)
+        //{
+        //    var ev = await _service.CreateAsync(dto);
+        //    return CreatedAtAction(nameof(Get), new { id = ev.Id }, ev);
+        //}
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, EventUpdateDto dto)
-        {
-            var ev = await _service.UpdateAsync(id, dto);
-            return ev == null ? NotFound() : Ok(ev);
-        }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> Update(int id, EventUpdateDto dto)
+        //{
+        //    var ev = await _service.UpdateAsync(id, dto);
+        //    return ev == null ? NotFound() : Ok(ev);
+        //}
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var result = await _service.DeleteAsync(id);
-            return result ? NoContent() : NotFound();
-        }
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    var result = await _service.DeleteAsync(id);
+        //    return result ? NoContent() : NotFound();
+        //}
     }
 }

@@ -13,9 +13,25 @@ namespace GameDevKz.Server.Services
             _db = db;
         }
 
-        public async Task<IEnumerable<Event>> GetAllAsync()
-            => await _db.Events.ToListAsync();
-
+        public async Task<IEnumerable<EventDto>> GetAllAsync()
+        {
+            return await _db.Events
+                .Include(e => e.EventTags)
+                    .ThenInclude(et => et.Tag)
+                .Include(e => e.Photos)
+                .Select(e => new EventDto
+                {
+                    Id = e.Id,
+                    Name = e.Name,
+                    Description = e.Description,
+                    Location = e.Location,
+                    CoverImageUrl = e.CoverImageUrl,
+                    EventStartDate = e.EventStartDate,
+                    Tags = e.EventTags.Select(et => et.Tag.Name),
+                    PhotoUrls = e.Photos.Select(p => p.Url)
+                })
+                .ToListAsync();
+        }
         public async Task<Event?> GetByIdAsync(int id)
             => await _db.Events.FindAsync(id);
 
