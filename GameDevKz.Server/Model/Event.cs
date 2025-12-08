@@ -26,5 +26,11 @@ namespace GameDevKz.Server.Model
 
         public DateTime CreateDate { get; set; }
 
+
+
+        public ICollection<EventTag> EventTags { get; set; } = new List<EventTag>();
+        public ICollection<Photo> Photos { get; set; } = new List<Photo>();
+        public ICollection<ParticipationRequest> ParticipationRequests { get; set; } = new List<ParticipationRequest>();
+
     }
 }
