@@ -1,33 +1,63 @@
 ﻿@model GameDevKz.Server.Model.Event
 
 @{
+    Layout = "_AdminLayout";
     ViewData["Title"] = "Удалить событие";
 }
 
-<div class="container mt-4">
-    <h1>Удалить событие</h1>
+<div class="max-w-3xl mx-auto mt-10">
+    <div class="bg-white dark:bg-gray-800 shadow-lg border border-red-300 dark:border-red-600 rounded-xl">
 
-    <div class="alert alert-warning">
-        Вы уверены, что хотите удалить это событие?
+        <!-- Header -->
+        <div class="bg-red-600 text-white px-6 py-4 rounded-t-xl">
+            <h1 class="text-xl font-semibold">Удалить событие</h1>
+        </div>
+
+        <div class="p-6">
+
+            <!-- Warning -->
+            <div class="bg-red-100 dark:bg-red-900 text-red-900 dark:text-red-100 border border-red-300 dark:border-red-700 px-4 py-3 rounded-lg mb-6">
+                <strong>Внимание!</strong> Вы уверены, что хотите удалить это событие?
+            </div>
+
+            <!-- Event Details -->
+            <dl class="grid grid-cols-1 sm:grid-cols-3 gap-y-4 mb-8">
+
+                <dt class="font-medium text-gray-600 dark:text-gray-300">Название</dt>
+                <dd class="sm:col-span-2 text-gray-900 dark:text-gray-100">@Model.Name</dd>
+
+                <dt class="font-medium text-gray-600 dark:text-gray-300">Описание</dt>
+                <dd class="sm:col-span-2 text-gray-900 dark:text-gray-100">@Model.Description</dd>
+
+                <dt class="font-medium text-gray-600 dark:text-gray-300">Локация</dt>
+                <dd class="sm:col-span-2 text-gray-900 dark:text-gray-100">@Model.Location</dd>
+
+                <dt class="font-medium text-gray-600 dark:text-gray-300">Дата</dt>
+                <dd class="sm:col-span-2 text-gray-900 dark:text-gray-100">@Model.EventStartDate.ToString("yyyy-MM-dd HH:mm")</dd>
+
+            </dl>
+
+            <!-- Actions -->
+            <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="flex items-center justify-between">
+
+                    <button type="submit"
+                            class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition">
+                        Удалить
+                    </button>
+
+                    <a asp-area="Admin"
+                       asp-controller="EventsAdmin"
+                       asp-action="Index"
+                       class="px-6 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-100 font-medium rounded-lg transition">
+                        Отмена
+                    </a>
+
+                </div>
+
+            </form>
+        </div>
     </div>
-
-    <dl class="row">
-        <dt class="col-sm-2">Название</dt>
-        <dd class="col-sm-10">@Model.Name</dd>
-
-        <dt class="col-sm-2">Описание</dt>
-        <dd class="col-sm-10">@Model.Description</dd>
-
-        <dt class="col-sm-2">Локация</dt>
-        <dd class="col-sm-10">@Model.Location</dd>
-
-        <dt class="col-sm-2">Дата</dt>
-        <dd class="col-sm-10">@Model.EventStartDate.ToString("yyyy-MM-dd HH:mm")</dd>
-    </dl>
-
-    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
-        @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-danger">Удалить</button>
-        <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Index" class="btn btn-secondary ms-2">Отмена</a>
-    </form>
 </div>

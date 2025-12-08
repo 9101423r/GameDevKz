@@ -1,32 +1,75 @@
 ﻿@model GameDevKz.Server.Model.Event
 
 @{
+    Layout = "_AdminLayout";
     ViewData["Title"] = "Детали события";
 }
 
-<div class="container mt-4">
-    <h1>Детали события</h1>
+<div class="p-6">
+    <h1 class="text-2xl font-bold mb-6">Детали события</h1>
 
-    <dl class="row">
-        <dt class="col-sm-2">Id</dt>
-        <dd class="col-sm-10">@Model.Id</dd>
+    <div class="bg-white shadow rounded-xl p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6">
 
-        <dt class="col-sm-2">Название</dt>
-        <dd class="col-sm-10">@Model.Name</dd>
+            <div>
+                <div class="text-gray-500 text-sm">ID</div>
+                <div class="text-lg font-medium">@Model.Id</div>
+            </div>
 
-        <dt class="col-sm-2">Описание</dt>
-        <dd class="col-sm-10">@Model.Description</dd>
+            <div>
+                <div class="text-gray-500 text-sm">Название</div>
+                <div class="text-lg font-medium">@Model.Name</div>
+            </div>
 
-        <dt class="col-sm-2">Локация</dt>
-        <dd class="col-sm-10">@Model.Location</dd>
+            <div class="md:col-span-2">
+                <div class="text-gray-500 text-sm">Описание</div>
+                <div class="text-lg">@Model.Description</div>
+            </div>
 
-        <dt class="col-sm-2">Дата события</dt>
-        <dd class="col-sm-10">@Model.EventStartDate.ToString("yyyy-MM-dd HH:mm")</dd>
+            <div>
+                <div class="text-gray-500 text-sm">Локация</div>
+                <div class="text-lg">@Model.Location</div>
+            </div>
 
-        <dt class="col-sm-2">Дата создания</dt>
-        <dd class="col-sm-10">@Model.CreateDate.ToString("yyyy-MM-dd HH:mm")</dd>
-    </dl>
+            <div>
+                <div class="text-gray-500 text-sm">Ссылка на локацию</div>
+                <div class="text-lg">@Model.LocationUrl</div>
+            </div>
 
-    <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редактировать</a>
-    <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Index" class="btn btn-secondary ms-2">Назад</a>
+            <div>
+                <div class="text-gray-500 text-sm">Обложка</div>
+                <div class="text-lg">@Model.CoverImageUrl</div>
+            </div>
+
+            <div>
+                <div class="text-gray-500 text-sm">Дата события</div>
+                <div class="text-lg">@Model.EventStartDate.ToString("yyyy-MM-dd HH:mm")</div>
+            </div>
+
+            <div>
+                <div class="text-gray-500 text-sm">Дата создания</div>
+                <div class="text-lg">@Model.CreateDate.ToString("yyyy-MM-dd HH:mm")</div>
+            </div>
+
+        </div>
+
+        <div class="mt-8 flex gap-3">
+
+            <a asp-area="Admin"
+               asp-controller="EventsAdmin"
+               asp-action="Edit"
+               asp-route-id="@Model.Id"
+               class="inline-flex items-center px-4 py-2 bg-yellow-500 text-white text-sm font-medium rounded-lg hover:bg-yellow-600 transition">
+                Редактировать
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="EventsAdmin"
+               asp-action="Index"
+               class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 text-sm font-medium rounded-lg hover:bg-gray-300 transition">
+                Назад
+            </a>
+
+        </div>
+    </div>
 </div>

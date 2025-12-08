@@ -1,44 +1,87 @@
 ﻿@model GameDevKz.Server.Model.Event
 
 @{
+    Layout = "_AdminLayout";
     ViewData["Title"] = "Создать событие";
 }
 
-<div class="container mt-4">
-    <h1>Создать событие</h1>
+<div class="p-6">
 
-    <form asp-action="Create" method="post">
-        @Html.AntiForgeryToken()
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <h1 class="text-2xl font-bold mb-6">Создать событие</h1>
 
-        <div class="mb-3">
-            <label asp-for="Name" class="form-label"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
+    <div class="bg-white shadow rounded-xl p-6">
 
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label"></label>
-            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
-            <span asp-validation-for="Description" class="text-danger"></span>
-        </div>
+        <form asp-action="Create" method="post" class="space-y-6">
+            @Html.AntiForgeryToken()
 
-        <div class="mb-3">
-            <label asp-for="Location" class="form-label"></label>
-            <input asp-for="Location" class="form-control" />
-            <span asp-validation-for="Location" class="text-danger"></span>
-        </div>
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm"></div>
 
-        <div class="mb-3">
-            <label asp-for="EventStartDate" class="form-label"></label>
-            <input asp-for="EventStartDate" type="datetime-local" class="form-control"
-                   value="@(Model?.EventStartDate == default ? DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm") : Model.EventStartDate.ToString("yyyy-MM-ddTHH:mm"))" />
-            <span asp-validation-for="EventStartDate" class="text-danger"></span>
-        </div>
+            <div>
+                <label asp-for="Name" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <input asp-for="Name"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2
+                              focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <span asp-validation-for="Name" class="text-red-500 text-sm"></span>
+            </div>
 
-        <button type="submit" class="btn btn-success">Создать</button>
-        <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Index" class="btn btn-secondary ms-2">Отмена</a>
-    </form>
+            <div>
+                <label asp-for="Description" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <textarea asp-for="Description" rows="4"
+                          class="w-full border border-gray-300 rounded-lg px-3 py-2
+                                 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <span asp-validation-for="Description" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div>
+                <label asp-for="Location" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <input asp-for="Location"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2
+                              focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <span asp-validation-for="Location" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div>
+                <label asp-for="LocationUrl" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <input asp-for="LocationUrl"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2
+                              focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <span asp-validation-for="LocationUrl" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div>
+                <label asp-for="CoverImageUrl" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <input asp-for="CoverImageUrl"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2
+                              focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <span asp-validation-for="CoverImageUrl" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div>
+                <label asp-for="EventStartDate" class="block text-sm font-medium text-gray-700 mb-1"></label>
+                <input asp-for="EventStartDate" type="datetime-local"
+                       value="@(Model.EventStartDate == default ? DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm") : Model.EventStartDate.ToString("yyyy-MM-ddTHH:mm"))"
+                       class="w-full border border-gray-300 rounded-lg px-3 py-2
+                              focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <span asp-validation-for="EventStartDate" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div class="flex gap-3 pt-4">
+                <button type="submit"
+                        class="px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">
+                    Создать
+                </button>
+
+                <a asp-area="Admin"
+                   asp-controller="EventsAdmin"
+                   asp-action="Index"
+                   class="px-5 py-2 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition">
+                    Отмена
+                </a>
+            </div>
+
+        </form>
+
+    </div>
 </div>
 
 @section Scripts {

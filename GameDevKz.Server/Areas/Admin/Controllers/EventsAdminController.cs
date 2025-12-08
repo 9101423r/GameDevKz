@@ -77,5 +77,12 @@ namespace GameDevKz.Server.Areas.Admin.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var ev = await _db.Events.FindAsync(id);
+            if (ev == null) return NotFound();
+            return View(ev);
+        }
     }
 }

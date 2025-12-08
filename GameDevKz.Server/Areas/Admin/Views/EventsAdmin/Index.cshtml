@@ -1,51 +1,77 @@
 ﻿@model IEnumerable<GameDevKz.Server.Model.Event>
 
 @{
+    Layout = "_AdminLayout";
     ViewData["Title"] = "Events — Admin";
 }
 
-<div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>События</h1>
-        <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Create" class="btn btn-primary">Создать событие</a>
+<div class="p-6">
+
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold">События</h1>
+
+        <a asp-area="Admin"
+           asp-controller="EventsAdmin"
+           asp-action="Create"
+           class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg
+                  hover:bg-blue-700 transition">
+            + Создать событие
+        </a>
     </div>
 
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Название</th>
-                <th>Локация</th>
-                <th>Дата события</th>
-                <th>Дата создания</th>
-                <th style="width:220px">Действия</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model != null && Model.Any())
-            {
-                foreach (var item in Model)
+    <div class="overflow-x-auto bg-white shadow rounded-xl">
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase">ID</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase">Название</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase">Локация</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase">Дата события</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase">Создано</th>
+                    <th class="px-4 py-3 text-left text-xs font-medium text-gray-600 uppercase w-56">Действия</th>
+                </tr>
+            </thead>
+
+            <tbody class="divide-y divide-gray-100">
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr class="hover:bg-gray-50 cursor-pointer"
+                            onclick="window.location='@Url.Action("Details", "EventsAdmin", new { area = "Admin", id = item.Id })'">
+                            <td class="px-4 py-3">@item.Id</td>
+                            <td class="px-4 py-3">@item.Name</td>
+                            <td class="px-4 py-3">@item.Location</td>
+                            <td class="px-4 py-3">@item.EventStartDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td class="px-4 py-3">@item.CreateDate.ToString("yyyy-MM-dd HH:mm")</td>
+
+                            <td class="px-4 py-3 space-x-2">
+
+                                <a asp-area="Admin" asp-controller="EventsAdmin"
+                                   asp-action="Edit" asp-route-id="@item.Id"
+                                   class="inline-block px-3 py-1 text-xs bg-yellow-100 text-yellow-700 rounded-lg hover:bg-yellow-200">
+                                    Редактировать
+                                </a>
+
+                                <a asp-area="Admin" asp-controller="EventsAdmin"
+                                   asp-action="Delete" asp-route-id="@item.Id"
+                                   class="inline-block px-3 py-1 text-xs bg-red-100 text-red-700 rounded-lg hover:bg-red-200">
+                                    Удалить
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+                }
+                else
                 {
                     <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.Location</td>
-                        <td>@item.EventStartDate.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@item.CreateDate.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>
-                            <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Просмотр</a>
-                            <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning ms-1">Редактировать</a>
-                            <a asp-area="Admin" asp-controller="EventsAdmin" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger ms-1">Удалить</a>
+                        <td colspan="6" class="px-4 py-6 text-center text-gray-500">
+                            Событий нет
                         </td>
                     </tr>
                 }
-            }
-            else
-            {
-                <tr>
-                    <td colspan="6" class="text-center">Событий нет</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>

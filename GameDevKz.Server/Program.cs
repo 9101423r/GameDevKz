@@ -69,6 +69,6 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
 // Seed roles/users (optional) — см. SeedData ниже
-// await SeedData.EnsureSeedDataAsync(app.Services);
+await SeedData.EnsureSeedDataAsync(app.Services);
 
 app.Run();

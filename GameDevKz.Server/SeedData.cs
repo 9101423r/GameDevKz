@@ -13,7 +13,7 @@ namespace GameDevKz.Server
 
             const string adminRole = "Admin";
             const string adminEmail = "vladimir@thehub.su";
-            const string adminPassword = "123123";
+            const string adminPassword = "Admin123!";
 
             if (!await roleMgr.RoleExistsAsync(adminRole))
                 await roleMgr.CreateAsync(new IdentityRole(adminRole));
