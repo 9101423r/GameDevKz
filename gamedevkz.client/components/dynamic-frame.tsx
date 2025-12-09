@@ -71,12 +71,12 @@ const dynamicFrames = [
 export function DynamicFrame() {
   return (
     <div className="h-screen w-screen bg-zinc-900 mb-32">
-      <DynamicFrameLayout 
+      {/* <DynamicFrameLayout 
         frames={dynamicFrames} 
         className="w-full h-full" 
         hoverSize={5}
         gapSize={20}
-      />
+      /> */}
     </div>
   )
 }

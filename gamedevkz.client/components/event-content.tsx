@@ -140,7 +140,7 @@ export default function EventContent({ event }: Props) {
         message: message.trim(),
       }
 
-      const res = await fetch("http://localhost:5266/api/RequestParticipiant", {
+      const res = await fetch("https://akira.emosdk.tech/api/RequestParticipiant", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

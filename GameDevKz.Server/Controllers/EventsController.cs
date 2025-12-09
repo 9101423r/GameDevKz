@@ -6,14 +6,10 @@ namespace GameDevKz.Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EventsController : ControllerBase
+    public class EventsController(IEventService service, ILogger<EventsController> logger) : ControllerBase
     {
-        private readonly IEventService _service;
-
-        public EventsController(IEventService service)
-        {
-            _service = service;
-        }
+        private readonly IEventService _service = service;
+        private readonly ILogger<EventsController> _logger = logger;
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -22,8 +18,17 @@ namespace GameDevKz.Server.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var ev = await _service.GetByIdAsync(id);
-            return ev == null ? NotFound() : Ok(ev);
+            _logger.LogInformation("Get Event by id");
+            try
+            {
+                var ev = await _service.GetByIdAsync(id);
+                return ev == null ? NotFound() : Ok(ev);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error get event by id");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         //[HttpPost]

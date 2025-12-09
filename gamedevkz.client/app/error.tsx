@@ -32,6 +32,7 @@ export default function Error({
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <AnimatedButton
             onClick={reset}
+            href='/'
             variant="outline"
             icon={<ArrowLeft size={16} />}
           >

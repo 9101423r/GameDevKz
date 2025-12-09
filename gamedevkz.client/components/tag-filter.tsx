@@ -17,7 +17,7 @@ export default function TagFilters() {
     async function fetchTags() {
       setLoading(true)
       try {
-        const res = await fetch("http://localhost:5266/api/Events")
+        const res = await fetch("https://akira.emosdk.tech/api/Events")
         if (!res.ok) throw new Error(`Ошибка ${res.status}`)
         const data = await res.json()
         if (!mounted) return

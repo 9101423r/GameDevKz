@@ -38,7 +38,7 @@ export default function EventsGrid() {
       setLoading(true)
       setError(null)
       try {
-        const res = await fetch("http://localhost:5266/api/Events", { signal: controller.signal })
+        const res = await fetch("https://akira.emosdk.tech/api/Events", { signal: controller.signal })
         if (!res.ok) {
           throw new Error(`Ошибка загрузки: ${res.status}`)
         }

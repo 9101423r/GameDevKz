@@ -1,5 +1,6 @@
-﻿using GameDevKz.Server.Model;
+﻿using GameDevKz.Server.Controllers;
 using GameDevKz.Server.DTOs;
+using GameDevKz.Server.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameDevKz.Server.Services
@@ -7,15 +8,17 @@ namespace GameDevKz.Server.Services
     public class ParticipiantService : IParticipiantService
     {
         private readonly AppDbContext _db;
+        private readonly ILogger<ParticipiantService> _logger;
 
-        public ParticipiantService(AppDbContext db)
+        public ParticipiantService(AppDbContext db, ILogger<ParticipiantService> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         public async Task<ParticipationRequest> CreateAsync(ParticipiantCreateDto dto)
         {
-
+            _logger.LogInformation("Start create new Participiant Request");
             var ev = await _db.Events.FindAsync(dto.EventId);
             if (ev == null)
                 throw new ArgumentException($"Событие с Id {dto.EventId} не найдено");
