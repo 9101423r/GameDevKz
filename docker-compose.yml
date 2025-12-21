@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  gamedevkz_server:
+    build:
+      context: ./GameDevKz
+      dockerfile: Dockerfile
+    image: gamedevkz_server:latest
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
+      # пример: строка подключения в .env -> DEFAULT_CONNECTION
+      ConnectionStrings__DefaultConnection: ${DEFAULT_CONNECTION:-}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - webnet
+
+  gamedevkz_client:
+    build:
+      context: ./gamedevkz.client
+      dockerfile: Dockerfile
+    image: gamedevkz_client:latest
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://gamedevkz_server:80}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - gamedevkz_server
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
+
+volumes:
+  db-data:
