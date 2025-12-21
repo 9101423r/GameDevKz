@@ -1,4 +1,5 @@
 ﻿using GameDevKz.Server;
+using GameDevKz.Server.Middleware;
 using GameDevKz.Server.Model;
 using GameDevKz.Server.Services;
 using Microsoft.AspNetCore.Identity;
@@ -54,6 +55,19 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseGlobalExceptionHandler(); 
+}
+
+
+app.UseRequestLogging();
+
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
@@ -81,7 +95,6 @@ app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
 
-// Seed roles/users (optional) — см. SeedData ниже
-await SeedData.EnsureSeedDataAsync(app.Services);
+//await SeedData.EnsureSeedDataAsync(app.Services);
 
 app.Run();
