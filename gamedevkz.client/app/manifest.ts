@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'X100 Photographer Portfolio',
-    short_name: 'X100',
-    description: 'A Next.js portfolio for professional photographers, designed to flawlessly showcase powerful visual stories.',
+    name: 'AKIRA Club',
+    short_name: 'AKIRA',
+    description: 'Алматинский Клуб Игровых Разработчиков АКИРА',
     start_url: '/',
     display: 'standalone',
     background_color: '#000000',

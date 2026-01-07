@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Twitter, Facebook, Youtube, Linkedin, Github } from "lucide-react"
+import { Instagram, Linkedin } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { motion } from "framer-motion"
 import Logo from "./logo"
@@ -28,7 +28,7 @@ export default function Footer() {
         >
           <div className="flex items-center gap-3 mb-4">
             {/* <Logo /> */}
-            <Link href="/" className="font-old-london text-2xl font-bold inline-block text-foreground">
+            <Link href="/" className="font-press-start-2p text-2xl font-bold inline-block text-foreground">
               <img className="h-[3vh]" src={"/Logo/akira_logo.png"}></img>
             </Link>
           </div>
@@ -37,7 +37,7 @@ export default function Footer() {
           </p>
           <div className="flex space-x-4 items-center">
             <motion.a
-              href="https://github.com/akira_gamedev"
+              href="https://instagram.com/akira_gamedev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
@@ -50,18 +50,18 @@ export default function Footer() {
 
 
               <motion.a
-                href="https://youtube.com/"
+                href="https://t.me/akira_almaty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Youtube size={20} />
-                <span className="sr-only">Youtube</span>
+                <TelegramIcon size={24} color="" />
+                <span className="sr-only">Telegram</span>
             </motion.a>
             <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/akira-gamedev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors"
@@ -131,3 +131,19 @@ export default function Footer() {
     </motion.footer>
   )
 }
+
+
+const TelegramIcon = ({ size = 24, color = '#0088CC' }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 48 48"
+    fill={color}
+    role="img"
+  >
+    <title>Telegram icon</title>
+    {/* Paste the SVG path data here */}
+    <path xmlns="http://www.w3.org/2000/svg" d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="#000000"/>
+  </svg>
+);

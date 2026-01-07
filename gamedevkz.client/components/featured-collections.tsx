@@ -32,7 +32,7 @@ export default function FeaturedCollections() {
         setLoading(true)
         setError(null)
 
-        const res = await fetch("https://akira.emosdk.tech/api/Events", { signal: controller.signal })
+        const res = await fetch("https://akira-gamedev.online/api/Events", { signal: controller.signal })
         if (!res.ok) {
           throw new Error(`Ошибка ${res.status}: ${res.statusText}`)
         }
@@ -100,7 +100,7 @@ export default function FeaturedCollections() {
           className="h-full"
         >
           <Link
-            href={"/events/${event.id}"}
+            href={`/events/${event.id}`}
             className="group block h-full"
             onClick={playShutterSound}
           >

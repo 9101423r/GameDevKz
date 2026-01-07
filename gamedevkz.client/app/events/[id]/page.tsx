@@ -10,7 +10,7 @@ interface Props {
 export default async function EventPage({ params }: Props) {
   const { id } = await params        // 👈 Теперь await обязателен
 
-  const res = await fetch(`https://akira.emosdk.tech/api/Events/${id}`, {
+  const res = await fetch(`https://akira-gamedev.online/api/Events/${id}`, {
     cache: "no-store",
   })
 

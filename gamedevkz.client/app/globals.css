@@ -4,7 +4,7 @@
 
 :root {
   --font-inter: "Inter", sans-serif;
-  --font-old-london: "Old London";
+  --font-press-start-2p: "Press Start 2P";
 }
 
 @layer utilities {
@@ -173,8 +173,8 @@ body.sounds-muted a {
 
 /* Font family */
 @font-face {
-  font-family: "Old London";
-  src: url("/fonts/Old London Font.woff") format("woff");
+  font-family: "Press Start 2P";
+  src: url("/fonts/PressStart2P-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -186,7 +186,7 @@ body.sounds-muted a {
          h4,
          h5,
          h6 {
-           font-family: var(--font-old-london);
+           font-family: var(--font-press-start-2p);
            font-weight: 400;
            font-style: normal;
            font-display: swap;
@@ -194,8 +194,8 @@ body.sounds-muted a {
          }
 
 /* Font family */
-.font-old-london {
-  font-family: var(--font-old-london);
+.font-press-start-2p {
+  font-family: var(--font-press-start-2p);
 }
 
 /* Dynamic frame layout */

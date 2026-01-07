@@ -38,7 +38,7 @@ export default function EventsGrid() {
       setLoading(true)
       setError(null)
       try {
-        const res = await fetch("https://akira.emosdk.tech/api/Events", { signal: controller.signal })
+        const res = await fetch("https://akira-gamedev.online/api/Events", { signal: controller.signal })
         if (!res.ok) {
           throw new Error(`Ошибка загрузки: ${res.status}`)
         }
@@ -73,9 +73,8 @@ export default function EventsGrid() {
 
     const matchesTag =
       !tagFilter || e.tags.some((t) => t.toLowerCase() === tagFilter.toLowerCase())
-
     return matchesQuery && matchesTag
-  })
+  }).reverse();
 
   const formatDate = (iso?: string) => {
     if (!iso) return ""
@@ -156,7 +155,7 @@ export default function EventsGrid() {
                   <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 rounded-full text-xs bg-white/30 text-white backdrop-blur-sm">
-                        Featured Event
+                        Мероприятия
                       </span>
                       {group[0].tags.map((tag) => (
                         <span
@@ -173,7 +172,7 @@ export default function EventsGrid() {
                     <div className="text-sm text-white/60 mb-3">
                       {formatDate(group[0].eventStartDate)} • {group[0].location}
                     </div>
-                    <p className="text-white/80 mb-6 max-w-2xl text-sm md:text-base group-hover:text-white/90 transition-colors">
+                    <p className="text-white/80 mb-6 line-clamp-3 max-w-2xl text-sm md:text-base group-hover:text-white/90 transition-colors">
                       {group[0].description}
                     </p>
                     <div className="inline-flex items-center gap-2 text-white border-b border-white/30 pb-1 group-hover:border-white transition-colors">

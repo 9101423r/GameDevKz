@@ -30,6 +30,7 @@ namespace GameDevKz.Server.Services
                     Tags = e.EventTags.Select(et => et.Tag.Name),
                     PhotoUrls = e.Photos.Select(p => p.Url)
                 })
+                .OrderByDescending(e => e.EventStartDate)
                 .ToListAsync();
         }
         public async Task<Event?> GetByIdAsync(int id)

@@ -18,8 +18,8 @@ export default function ContactPage() {
        {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/new zealand/new-zealand-17.jpg?height=800&width=1920"
-          alt="Contact X100"
+          src="/Contact/contact.jpg?height=800&width=1920"
+          alt="Contact"
           fill
           priority
           className="object-cover"
@@ -31,8 +31,8 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl text-white mb-4">Contact</h1>
-          <p className="text-white/90 text-lg max-w-2xl">Part of your vision</p>
+          <h1 className="text-4xl md:text-5xl text-white mb-4">Связь</h1>
+          <p className="text-white/90 text-lg max-w-2xl">На случай если понадобиться коснуться</p>
         </motion.div>
       </section>
 
@@ -44,9 +44,9 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl mb-6">Get in Touch</h1>
+            <h1 className="text-4xl md:text-5xl mb-6">Будем на связи</h1>
             <p className="text-primary/60 mb-8 max-w-md">
-              I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+              Мы всегда открыты для новых знакомств и сотрудничества. Независимо от того, есть ли у вас вопрос, предложение или просто хотите поздороваться, мы будем рады услышать вас!
             </p>
 
             <motion.div
@@ -68,12 +68,12 @@ export default function ContactPage() {
                 {
                   icon: <Mail className="text-primary mt-1" size={20} />,
                   title: "Email",
-                  content: "contact@x100.com",
+                  content: "vladimir@thehub.su",
                 },
                 {
                   icon: <MapPin className="text-primary mt-1" size={20} />,
-                  title: "Location",
-                  content: "31.9514° S, 115.8617° E",
+                  title: "Координаты",
+                  content: "43.2380° N, 76.8829° E",
                 },
               ].map((item) => (
                 <motion.div
@@ -98,15 +98,12 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <h3 className="text-xl mb-4">Keep Up To Date</h3>
+              <h3 className="text-xl mb-4">Соц. сети</h3>
               <div className="flex flex-wrap gap-1">
                 {[
-                  { icon: <Instagram size={26} />, label: "Instagram", href: "https://github.com/lilxyzz" },
-                  { icon: <Twitter size={26} />, label: "Twitter", href: "https://github.com/lilxyzz" },
-                  { icon: <Facebook size={26} />, label: "Facebook", href: "https://github.com/lilxyzz" },
-                  { icon: <Youtube size={26} />, label: "Youtube", href: "https://github.com/lilxyzz" },
-                  // { icon: <Linkedin size={20} />, label: "Linkedin", href: "https://linkedin.com" },
-                  { icon: <Github size={26} />, label: "Github", href: "https://github.com/lilxyzz" },
+                  { icon: <Instagram size={26} />, label: "Instagram", href: "https://instagram.com/akira_gamedev" },
+                  { icon: <TelegramIcon size={26} />, label: "Telegram", href: "https://t.me/akira_almaty" },
+                  { icon: <Linkedin size={20} />, label: "Linkedin", href: "https://www.linkedin.com/company/akira-gamedev" },
                 ].map((item) => (
                   <motion.a
                     key={item.label}
@@ -131,7 +128,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-2xl mb-6">Send a Message</h2>
+            <h2 className="text-2xl mb-6">Связаться с нами</h2>
             <ContactForm />
           </motion.div>
         </div>
@@ -147,31 +144,27 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Frequently Asked Questions
+            Часто задаваемые вопросы
           </motion.h2>
 
           <div className="space-y-8">
             {[
               {
-                question: "Do you offer prints of your photographs?",
+                question: "Как стать участником АКИРЫ?",
                 answer:
-                  "Yes, most of my photographs are available as fine art prints. You can inquire about specific images through the contact form.",
+                  "Стать участником нашего клуба может любой человек, достаточно поучаствовать в наших мероприятиях после чего мы добавим тебя в наш закрытый чатик.",
               },
               {
-                question: "Are you available for commercial photography?",
+                question: "Участие в клубе платное?",
                 answer:
-                  "Absolutely. I work with brands and publications on commercial projects. Please reach out with details about your project for a custom quote.",
+                  "Нет, мы не берём клубных взносов или подписок, но некоторые наше мероприятия могут быть платными для оплаты аренды площадки.",
               },
               {
-                question: "Do you offer photography workshops?",
+                question: "Вы обучаете игровой разработке?",
                 answer:
-                  "Yes, I regularly host workshops both in-person and online. Join my newsletter to be notified when new workshop dates are announced.",
+                  "Нет, мы не занимаемся обучением и не проводим курсов, но вывсегда можете найти ментора, спросить совета и поучаствовать в образовательных вокршопах нашего клуба.",
               },
-              {
-                question: "Can I license your photos for my website/publication?",
-                answer:
-                  "Yes, licensing options are available for both digital and print use. Please contact me with details about your intended use for licensing information.",
-              },
+       
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -198,9 +191,9 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl mb-4">Featured Collections</h2>
+            <h2 className="text-3xl md:text-4xl mb-4">Последние события</h2>
             <p className="text-primary max-w-2xl mx-auto">
-              Explore some of my most popular photography collections from around the world
+              Здесь ты можешь найти прошедние и грядующие ивенты нашего клуба
             </p>
           </motion.div>
           <FeaturedCollections />
@@ -212,7 +205,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <AnimatedButton href="/showcase" variant="primary" icon={<ArrowRight size={18} />}>
-              View All Collections
+              Больше
             </AnimatedButton>
           </motion.div>
         </div>
@@ -220,3 +213,18 @@ export default function ContactPage() {
     </div>
   )
 }
+
+const TelegramIcon = ({ size = 24, color = '#0088CC' }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 48 48"
+    fill={color}
+    role="img"
+  >
+    <title>Telegram icon</title>
+    {/* Paste the SVG path data here */}
+    <path xmlns="http://www.w3.org/2000/svg" d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="#000000"/>
+  </svg>
+);

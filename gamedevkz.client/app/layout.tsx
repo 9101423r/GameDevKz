@@ -17,16 +17,15 @@ export const metadata: Metadata = {
   description: "Алматинский Клуб Игровых разработчиков АКИРА",
   // Set initial theme-color meta tag for iOS Safari
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' }
   ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="ru" className={inter.variable} suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <SafariThemeColor />
           <SoundEffects />
           <Header />

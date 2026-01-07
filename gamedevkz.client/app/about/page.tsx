@@ -11,8 +11,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/Iceland/iceland-7.jpg?height=800&width=1920"
-          alt="About X100"
+          src="/about/about.jpg?height=800&width=1920"
+          alt="About"
           fill
           priority
           className="object-cover"
@@ -24,8 +24,8 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl text-white mb-4">About Me</h1>
-          <p className="text-white/90 text-lg max-w-2xl">The story behind the lens</p>
+          <h1 className="text-4xl md:text-5xl text-white mb-4">О нас</h1>
+          <p className="text-white/90 text-lg max-w-2xl">Кто мы, что мы, как мы </p>
         </motion.div>
       </section>
       <div className="header-height"></div>
@@ -41,8 +41,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <Image
-              src="/Iceland/iceland-12.jpg?height=1200&width=800"
-              alt="Photographer portrait"
+              src="/about/first_photo.jpg?height=1200&width=800"
+              alt="First Photo"
               fill
               className="object-cover"
             />
@@ -53,38 +53,17 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl mb-6">The Journey</h2>
+            <h2 className="text-3xl md:text-4xl mb-6">О нас</h2>
             <p className="text-primary mb-4">
-              I'm a professional photographer with over 10 years of experience capturing moments around the world. My
-              passion for photography began during a backpacking trip through Southeast Asia, where I discovered the
-              power of visual storytelling.
+              Алматинский Клуб Игровых Разработчиков АКИРА - это профессиональное сообщество, объединяющее разработчиков игр, художников, дизайнеров, композиторов, тестироващиков и геймеров в Алматы. Наша миссия - создать платформу для обмена знаниями, опытом и поддержкой среди тех, кто увлечен созданием игр.
             </p>
             <p className="text-primary mb-4">
-              Since then, I've traveled to over 30 countries, documenting landscapes, cultures, and urban environments.
-              My work has been featured in publications like National Geographic, Condé Nast Traveler, and Vogue.
+              Наш независимый, некоммерческий клуб был основан 14 февраля 2023, после проведения международного казахстанского геймджема <a href="https://mythical.gamejam.su" target="_blank" className="underline">mythical.gamejam</a>, как место для продолжения общения и сотрудничества между участниками. С тех пор мы организовали множество мероприятий, включая встречи, воркшопы, лекции и демо-дни, чтобы помочь нашим членам развиваться профессионально и лично.
             </p>
             <p className="text-primary mb-6">
-              I believe that photography has the power to connect people across cultures and inspire a deeper
-              appreciation for our world. Each image I create aims to tell a story and evoke emotion.
+              
             </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <Camera size={20} className="text-primary" />
-                <span className="text-primary">Fujifilm x100vi & Leica M10</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe size={20} className="text-primary" />
-                <span className="text-primary">30+ Countries</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award size={20} className="text-primary" />
-                <span className="text-primary">Award-winning</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users size={20} className="text-primary" />
-                <span className="text-primary">Workshops & Mentoring</span>
-              </div>
-            </div>
+           
           </motion.div>
         </div>
       </section>
@@ -99,24 +78,24 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            My Philosophy
+            Наши ценности
           </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Authenticity",
+                title: "Люди",
                 description:
-                  "I believe in capturing authentic moments that tell real stories. My approach focuses on finding beauty in truth rather than manufacturing perfect scenes.",
+                  "Мы верим, что основа любой индустрии — это люди. Мы стремимся создавать сообщество, где каждый чувствует себя ценным и поддерживаемым.",
               },
               {
-                title: "Connection",
+                title: "Поддержка",
                 description:
-                  "Photography creates connections - between viewer and subject, between cultures, and between people. I strive to foster these connections through my work.",
+                  "Мы здесь, чтобы помогать друг другу расти и развиваться. Независимо от уровня опыта, каждый член нашего клуба может найти поддержку и наставничество.",
               },
               {
-                title: "Respect",
+                title: "Развитие",
                 description:
-                  "I approach every environment and subject with deep respect. This means respecting cultures, natural spaces, and the stories I'm privileged to capture.",
+                  "Мы стремимся к постоянному обучению и совершенствованию. Через наши мероприятия и ресурсы мы помогаем нашим членам развивать свои навыки и знания в области игровой разработки.",
               },
             ].map((item, index) => (
               <motion.div
@@ -136,7 +115,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Timeline
       <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto">
         <motion.h2
           className="text-3xl md:text-4xl mb-12 text-center"
@@ -198,7 +177,7 @@ export default function AboutPage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="min-w-[90%] justify-self-center mr-4 ml-4 py-20 my-20 px-4 md:px-8 rounded-3xl border-[1px] border-border">
@@ -209,12 +188,12 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-primary text-3xl md:text-4xl mb-6">Collaborate?</h2>
+          <h2 className="text-primary text-3xl md:text-4xl mb-6">Поговорим?</h2>
           <p className="text-primary max-w-2xl mx-auto mb-8">
-            Whether you're looking for prints, licensing, or a custom photography project, feel free to get in touch.
+            Мы всегда открыты для новых знакомств и сотрудничества. Независимо от того, есть ли у вас вопрос, предложение или просто хотите поздороваться, мы будем рады услышать вас!
           </p>
           <AnimatedButton href="/contact" variant="primary" icon={<ArrowRight size={18} />}>
-            Get in Touch
+            Связь
           </AnimatedButton>
         </motion.div>
       </section>

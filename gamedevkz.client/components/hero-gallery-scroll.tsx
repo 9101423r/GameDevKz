@@ -17,7 +17,7 @@ const IMAGES = [
 
 export function HeroGalleryScroll() {
   return (
-    <ContainerScroll className="h-[350vh]">
+    <ContainerScroll className="h-[200vh]">
       <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-4">
         {IMAGES.map((imageUrl, index) => (
           <BentoCell

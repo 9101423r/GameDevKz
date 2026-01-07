@@ -1,7 +1,7 @@
 // components/event-content.tsx
 "use client"
 
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef, useMemo } from "react"
 import Image from "next/image"
 import { PhotoGallery } from "@/components/photo-gallery"
 import TagList from "@/components/tag-list"
@@ -140,7 +140,7 @@ export default function EventContent({ event }: Props) {
         message: message.trim(),
       }
 
-      const res = await fetch("https://akira.emosdk.tech/api/RequestParticipiant", {
+      const res = await fetch("https://akira-gamedev.online/api/RequestParticipiant", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -188,6 +188,139 @@ export default function EventContent({ event }: Props) {
     return () => window.removeEventListener("keydown", onKey)
   }, [isModalOpen])
 
+  const sanitizeHtml = (dirtyHtml: string) => {
+    if (!dirtyHtml) return ""
+
+    // Создаём документ и парсим HTML
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(dirtyHtml, "text/html")
+
+    const allowedTags = new Set([
+      "a",
+      "b",
+      "strong",
+      "i",
+      "em",
+      "u",
+      "p",
+      "br",
+      "ul",
+      "ol",
+      "li",
+      "blockquote",
+      "code",
+      "pre",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "span",
+      "div",
+      "img",
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "td",
+      "th",
+      "hr"
+    ])
+
+    const allowedAttrs = new Set([
+      "href",
+      "src",
+      "alt",
+      "title",
+      "target",
+      "rel",
+      "class",
+      "id",
+      "width",
+      "height",
+      "role",
+      "aria-hidden",
+      "aria-label"
+    ])
+
+    const isUriSafe = (uri: string) => {
+      if (!uri) return true
+      const trimmed = uri.trim().toLowerCase()
+      // разрешаем relative, http, https, mailto, tel, data:image (для небольших изображений)
+      if (trimmed.startsWith("javascript:")) return false
+      return true
+    }
+
+    const walk = (node: Node) => {
+      // Работаем с копией списка дочерних узлов (live list может меняться)
+      const children = Array.from(node.childNodes)
+      for (const child of children) {
+        if (child.nodeType === Node.ELEMENT_NODE) {
+          const el = child as HTMLElement
+          const tag = el.tagName.toLowerCase()
+
+          if (!allowedTags.has(tag)) {
+            // Если тег не разрешён — распакуем его содержимое (удалим сам тег, оставим детей)
+            const parent = el.parentNode
+            if (parent) {
+              while (el.firstChild) {
+                parent.insertBefore(el.firstChild, el)
+              }
+              parent.removeChild(el)
+              // после удаления, продолжим обход от родителя (уже вставленные дети будут обработаны в следующей итерации)
+              walk(parent)
+              continue
+            } else {
+              // нет родителя — просто удаляем
+              el.remove()
+              continue
+            }
+          }
+
+          // Очищаем атрибуты — оставляем только белый список
+          const attrs = Array.from(el.attributes)
+          for (const attr of attrs) {
+            const name = attr.name.toLowerCase()
+            const value = attr.value
+
+            if (!allowedAttrs.has(name)) {
+              el.removeAttribute(attr.name)
+              continue
+            }
+
+            // Проверка безопасности для href/src
+            if ((name === "href" || name === "src") && !isUriSafe(value)) {
+              el.removeAttribute(attr.name)
+              continue
+            }
+
+            // Для ссылок target=_blank — ставим безопасный rel
+            if (tag === "a" && name === "target") {
+              // оставляем target, но обеспечим rel
+              const rel = el.getAttribute("rel") || ""
+              const relParts = rel.split(/\s+/).filter(Boolean)
+              if (!relParts.includes("noopener")) relParts.push("noopener")
+              if (!relParts.includes("noreferrer")) relParts.push("noreferrer")
+              el.setAttribute("rel", relParts.join(" "))
+            }
+          }
+        }
+
+        // рекурсивно обработать детей
+        walk(child)
+      }
+    }
+
+    walk(doc.body)
+
+    return doc.body.innerHTML
+  }
+
+  // подготовим безопасный HTML (memoize для производительности)
+  const sanitizedDescription = useMemo(() => sanitizeHtml(event.description ?? ""), [event.description])
+
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -222,7 +355,11 @@ export default function EventContent({ event }: Props) {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <div className="prose max-w-none dark:prose-invert">
-          <p className="text-lg text-primary leading-relaxed">{event.description}</p>
+          <div
+            className="text-lg text-primary leading-relaxed"
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
+          />
         </div>
 
         {/* Место/адрес */}

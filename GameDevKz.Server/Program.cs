@@ -66,7 +66,7 @@ else
 }
 
 
-app.UseRequestLogging();
+// app.UseRequestLogging();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();

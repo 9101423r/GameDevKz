@@ -25,9 +25,9 @@ export default function Error({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl mb-4">Something went wrong</h2>
+        <h2 className="text-3xl md:text-4xl mb-4">Упссс... Что то пошло не так</h2>
         <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-          We apologize for the inconvenience. Please try again or return to the homepage.
+          Мы приносим свои извинения за неудобства. Пожалуйста, попробуйте снова или вернитесь на главную страницу.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <AnimatedButton
@@ -36,14 +36,14 @@ export default function Error({
             variant="outline"
             icon={<ArrowLeft size={16} />}
           >
-            Try again
+            Ещё раз
           </AnimatedButton>
           <AnimatedButton
             href="/"
             variant="outline"
             icon={<ArrowLeft size={16} />}
           >
-            Return Home
+            На главную
           </AnimatedButton>
         </div>
       </motion.div>

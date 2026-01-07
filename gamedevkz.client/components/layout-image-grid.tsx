@@ -14,7 +14,7 @@ type Card = {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
+      <p className="font-press-start-2p  font-bold md:text-4xl text-xl text-white">
       Digital Bridge GCA 2025
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
@@ -27,7 +27,7 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
+      <p className="font-press-start-2p  font-bold md:text-4xl text-xl text-white">
         AKIRA DEMO DAY
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
@@ -40,7 +40,7 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
+      <p className="font-press-start-2p  font-bold md:text-4xl text-xl text-white">
         Shashlyki
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
@@ -53,7 +53,7 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-oldLondon font-bold md:text-4xl text-xl text-white">
+      <p className="font-press-start-2p  font-bold md:text-4xl text-xl text-white">
         Turkic Game Jam 2025
       </p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">

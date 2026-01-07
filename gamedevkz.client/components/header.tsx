@@ -72,7 +72,7 @@ export default function Header() {
             {/* <Logo /> */}
             <Link
               href="/"
-              className={`font-old-london p-3 text-2xl  duration-300w-10 h-10 flex items-center justify-center rounded-full bg-background/90 text-primary transition-colors ${
+              className={`font-press-start-2p p-3 text-2xl  duration-300w-10 h-10 flex items-center justify-center rounded-full bg-background/90 text-primary transition-colors ${
                 isScrolled || pathname !== "/" ? "text-primary" : "text-primary"
               }`}
             >
@@ -99,9 +99,9 @@ export default function Header() {
           </nav>
 
           {/* Theme Toggle at the end of the header */}
-          <div className="flex-shrink-0 md:block toggle-container">
+          {/* <div className="flex-shrink-0 md:block toggle-container">
             <ThemeToggle />
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden duration-300w-10 h-10 flex items-center justify-center rounded-full bg-background text-primary transition-colors">
@@ -140,11 +140,24 @@ export default function Header() {
               </motion.button>
             </div>
             <nav className="flex-1 flex flex-col items-center pt-32">
+              {/* Logo and Brand */}
+              <div className="flex-shrink-0 flex items-center gap-3">
+                {/* <Logo /> */}
+                <Link
+                  href="/"
+                  className={`font-press-start-2p p-3 text-2xl pb-10 duration-300w-10 h-10 flex items-center justify-center rounded-full bg-background/90 text-primary transition-colors ${
+                    isScrolled || pathname !== "/" ? "text-primary" : "text-primary"
+                  }`}
+                >
+                  <img className="h-[5vh]" src={"/Logo/akira_logo.png"}></img>
+                </Link>
+              </div>
+        
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-4 py-3 text-3xl font-old-london ${
+                  className={`block px-4 py-3 text-3xl font-press-start-2p ${
                     pathname === item.href ? "text-primary font-medium" : "text-foreground hover:text-primary/80"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -152,9 +165,9 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <ThemeToggle />
-              </div>
+              </div> */}
             </nav>
           </motion.div>
         )}
