@@ -349,19 +349,47 @@ export default function EventContent({ event }: Props) {
 
       {/* Event Info */}
       <motion.section
-        className="py-12 px-4 md:px-8 max-w-5xl mx-auto mb-10 mt-10"
+        className="py-6 px-4 md:px-8 max-w-5xl mx-auto mb-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <div className="prose max-w-none dark:prose-invert">
-          <div
-            className="text-lg text-primary leading-relaxed"
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
-          />
+        {/* Registration action */}
+        <div className="mt">
+          {submitted ? (
+            <div className="rounded-md bg-green-700/90 text-white px-4 py-3 inline-block">
+              Спасибо за регистрацию! Подтверждение вашего участие придёт на указанный Email адрес.
+            </div>
+          ) : (
+            <>
+              <div className="md:flex md:justify-between items-center w-full">
+                <div className="text-2xl">
+                  <strong>{event.name}</strong>
+                </div>
+                <div className="mt-6 md:mt-0">
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    disabled={isPastEvent}
+                    className={`inline-flex items-center gap-3 px-5 py-3 rounded-md font-medium transition ${
+                      isPastEvent
+                        ? "bg-gray-600 text-gray-300 cursor-not-allowed"
+                        : "bg-white text-black hover:bg-black hover:text-white border border-black"
+                    }`}
+                    aria-disabled={isPastEvent}
+                    title={isPastEvent ? "Событие уже прошло — регистрация закрыта" : "Зарегистрироваться на событие"}
+                  >
+                    Зарегистрироваться
+                  </button>
+                  {isPastEvent && (
+                    <div className="mt-2 text-sm text-gray-400">Регистрация недоступна — событие уже прошло.</div>
+                  )}
+                </div>
+              </div>
+  
+            </>
+          )}
         </div>
-
+        
         {/* Место/адрес */}
         {event.location && (
           <div className="mt-6 text-lg text-gray-800 ">
@@ -375,34 +403,17 @@ export default function EventContent({ event }: Props) {
             <strong>Когда:</strong> {formatDate(event.eventStartDate)}
           </div>
         )}
-
-        {/* Registration action */}
-        <div className="mt-6">
-          {submitted ? (
-            <div className="rounded-md bg-green-700/90 text-white px-4 py-3 inline-block">
-              Спасибо за регистрацию! Подтверждение вашего участие придёт на указанный Email адрес.
-            </div>
-          ) : (
-            <>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                disabled={isPastEvent}
-                className={`inline-flex items-center gap-3 px-5 py-3 rounded-md font-medium transition ${
-                  isPastEvent
-                    ? "bg-gray-600 text-gray-300 cursor-not-allowed"
-                    : "bg-white text-black hover:opacity-90"
-                }`}
-                aria-disabled={isPastEvent}
-                title={isPastEvent ? "Событие уже прошло — регистрация закрыта" : "Зарегистрироваться на событие"}
-              >
-                Зарегистрироваться
-              </button>
-              {isPastEvent && (
-                <div className="mt-2 text-sm text-gray-400">Регистрация недоступна — событие уже прошло.</div>
-              )}
-            </>
-          )}
+        <div className="prose max-w-none mt-8">
+          <div
+            className="text-lg text-primary leading-relaxed"
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
+          />
         </div>
+
+       
+
+        
       </motion.section>
 
       {/* Photo Gallery */}

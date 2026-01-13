@@ -13,7 +13,7 @@ const IMAGES = [
   "/HeroImages/cover1.jpg",
   "/HeroImages/cover0.jpeg",
   "/HeroImages/cover.jpg",
-]
+];
 
 export function HeroGalleryScroll() {
   return (
