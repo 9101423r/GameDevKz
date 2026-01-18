@@ -73,10 +73,10 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-primary text-3xl md:text-4xl mb-6">Заинтерисован?</h2>
+          <h2 className="text-primary text-3xl md:text-4xl mb-6">Заинтересован?</h2>
           <p className="text-primary max-w-2xl mx-auto mb-8">
-            Наш клуб это открытое для мира пространство. Для вступления в клуб достаточно прийти и поучаствовать в любом нашем мероприятии и мы добавим тебя в наш закрытый чатик. 
-            <br/>
+            Наш клуб - это открытое для мира пространство. Для вступления в клуб достаточно прийти и поучаствовать в любом нашем мероприятии, и мы добавим тебя в наш закрытый чатик.
+            <br />
             А для потенциального партнёрства можешь связаться с нами
           </p>
           <AnimatedButton href="/contact" variant="primary" icon={<ArrowRight size={18} />}>
@@ -97,7 +97,7 @@ export default function Home() {
           >
             <h2 className="text-primary text-3xl md:text-4xl mb-4">Последние события</h2>
             <p className="text-primary max-w-2xl mx-auto">
-              Здесь ты можешь найти прошедние и грядующие ивенты нашего клуба
+              Здесь ты можешь найти прошедшие и грядущие ивенты нашего клуба
             </p>
           </motion.div>
           <FeaturedCollections />

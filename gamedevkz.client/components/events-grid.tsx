@@ -31,6 +31,10 @@ export default function EventsGrid() {
   const { playShutterSound } = useShutterSound()
   const pathname = usePathname()
 
+  function stripHtml(html: string) {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()
+}
+
   useEffect(() => {
     const controller = new AbortController()
 
@@ -173,7 +177,7 @@ export default function EventsGrid() {
                       {formatDate(group[0].eventStartDate)} • {group[0].location}
                     </div>
                     <p className="text-white/80 mb-6 line-clamp-3 max-w-2xl text-sm md:text-base group-hover:text-white/90 transition-colors">
-                      {group[0].description}
+                      {stripHtml(group[0].description)}
                     </p>
                     <div className="inline-flex items-center gap-2 text-white border-b border-white/30 pb-1 group-hover:border-white transition-colors">
                       <span>Подробнее о событии</span>
@@ -220,7 +224,7 @@ export default function EventsGrid() {
                           {formatDate(event.eventStartDate)} • {event.location}
                         </div>
                         <p className="text-white/80 mb-4 line-clamp-2 text-sm group-hover:text-white/90 transition-colors">
-                          {event.description}
+                          {stripHtml(event.description)}
                         </p>
                         <div className="flex justify-between items-center">
                           <div className="flex flex-wrap gap-2">
